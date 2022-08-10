@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'sans-serif';
+}
+a {
+    text-decoration: none;
+}
+header marquee{
+    font-size: 3.5rem;
+    color: #4582EC;
+    font-weight: bolder;
+}
+
+
+/*************************************************************************************/
+main .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+main .cards-container .card {
+    border: 1px solid black;
+    width: 95%;
+    border-radius: 5px;
+    box-shadow: 11px 14px 13px -3px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+    transition: 0.5s all;
+}
+main .cards-container .card h2 {
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: #333333;
+    padding: 10px;
+}
+main .cards-container .card h3 { /*by*/
+    font-size: 1.3rem;
+    color: #333333;
+    padding: 0 10px;
+}
+main .cards-container .card b { /*autor*/
+    color: #4582EC;
+}
+main .cards-container .card a { /*about*/
+    color: #4582EC;
+    font-weight: 150;
+}
+main .cards-container .card p { 
+    font-size: 1.5rem;
+    padding: 10px;
+}
+footer {
+    margin-top: 40px;
+    background-color: rgb(73, 61, 46);
+}
+footer p {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+/********************************************************************************************************/
+/*cards 2x5*/
+.card1 {
+    grid-area: a;
+}.card2 {
+    grid-area: b;
+}.card3 {
+    grid-area: c;
+}.card4 {
+    grid-area: d;
+}.card5 {
+    grid-area: e;
+}.card6 {
+    grid-area: f;
+}.card7 {
+    grid-area: g;
+}.card8 {
+    grid-area: h;
+}.card9 {
+    grid-area: i;
+}.card10 {
+    grid-area: j;
+}
+/*hover*/
+main .cards-container .card:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+    transition: 0.5s all;
+    outline: 3px solid rgb(66, 66, 237);
+    outline-offset: -5px;
+}
+
+/*******************************************SOCIAL BAR*******************************************************************/
+nav {
+    top: 100px;
+    margin-top: 100px;
+    position: fixed;
+    display: none;
+}
+nav ul li a .linkedin {
+    background: url(img/linkedin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+nav ul li a .github {
+    background: url(img/GitHub.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+nav ul li a .twitter {
+    background: url(img/twitter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+nav ul li a .platzi {
+    background: url(img/platzii.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.5s;
+}
+nav ul li:nth-child(1) a {
+    background-color: #0808d4c7;
+    border-top-right-radius: 20px;
+}
+nav ul li:nth-child(2) a {
+    background-color: #a42317;
+}
+nav ul li:nth-child(3) a {
+    background-color: #309fdf;
+}
+nav ul li:nth-child(4) a {
+    background-color: #96C94F;
+    border-end-end-radius: 20px;
+}
+nav ul li a span {
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+}
+nav ul li a:hover {
+    padding: 15px 15px 15px 60px;
+    background-color: grey;
+    border-top-right-radius: 15px;
+    border-end-end-radius: 15px;
+    transition: all 0.5s;
+}
+
+/**********************************************QUERIES*******************************************/
+@media (min-width:768px) {
+    main .cards-container {
+     display: grid;
+     justify-items: center;
+     grid-template-columns: 1fr 1fr;
+     grid-template-areas: 
+     "a b"
+     "c d"
+     "e f"
+     "g h"
+     "i j";
+    }
+    nav {
+        display: block;
+    }
+}
